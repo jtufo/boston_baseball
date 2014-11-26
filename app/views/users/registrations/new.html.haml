@@ -1,0 +1,90 @@
+%h2 Sign up Player
+= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+  = devise_error_messages!
+
+  %div
+    = f.label :first_name
+    %br/
+    = f.email_field :first_name, autofocus: true
+  %div
+    = f.label :last_name
+    %br/
+    = f.email_field :last_name, autofocus: true
+
+  %div
+    = f.label :city
+    %br/
+    = f.email_field :city, autofocus: true
+
+  %div
+    = f.label :state
+    %br/
+    = f.email_field :state, autofocus: true
+
+  %div
+    = f.label :zip
+    %br/
+    = f.email_field :zip, autofocus: true
+
+  %div
+    = f.label :phone
+    %br/
+    = f.email_field :phone, autofocus: true
+
+  %div
+    = f.label :birthdate
+    %br/
+    = f.email_field :birthdate, autofocus: true
+
+  %div
+    = f.label :age_group
+    %br/
+    = f.email_field :age_group, autofocus: true
+
+  %div
+    = f.label :primary_position
+    %br/
+    = f.email_field :primary_position, autofocus: true
+
+  %div
+    = f.label :secondary_position
+    %br/
+    = f.email_field :secondary_position, autofocus: true
+
+  %div
+    = f.label :bats
+    %br/
+    = f.email_field :bats, autofocus: true
+
+  %div
+    = f.label :throws
+    %br/
+    = f.email_field :throws, autofocus: true
+
+  %div
+    = f.label :playing_experience
+    %br/
+    = f.email_field :playing_experience, autofocus: true
+
+  %div
+    = f.label :last_played
+    %br/
+    = f.email_field :last_played, autofocus: true
+
+  %div
+    = f.label :email
+    %br/
+    = f.email_field :email, autofocus: true
+  %div
+    = f.label :password
+    - if @validatable
+      %i
+        (#{@minimum_password_length} characters minimum)
+    %br/
+    = f.password_field :password, autocomplete: "off"
+  %div
+    = f.label :password_confirmation
+    %br/
+    = f.password_field :password_confirmation, autocomplete: "off"
+  %div= f.submit "Sign up"
+= render "users/shared/links"

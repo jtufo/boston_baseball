@@ -8,6 +8,19 @@ Rails.application.routes.draw do
   
   root 'welcome#index'
 
+  get 'manager' => 'landing#manager'
+  get 'player' => 'landing#player'
+
+  devise_scope :user do
+    get "player/sign_up", to: "devise/registrations#new"
+    get "player/sign_in", to: "devise/sessions#new"
+  end
+
+  devise_scope :admin_user do
+    get "manager/sign_up", to: "devise/registrations#new"
+    get "manager/sign_in", to: "devise/sessions#new"
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
