@@ -12,11 +12,11 @@ class ApplicationController < ActionController::Base
       devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:first_name, :last_name, :email, :password, :franchise, :league) }
     end
 
-  def after_sign_in_path_for(admin_user)
-    manager_path
-  end
-
-  def after_sign_in_path_for(user)
-    player_path
+  def after_sign_in_path_for(resource_or_scope)
+    if resource_or_scope.is_a?(User)
+      player_path
+    else
+      manager_path
+    end
   end
 end
