@@ -1,0 +1,7 @@
+%h1 Users#index
+%p Find me in app/views/users/index.html.haml
+
+%table
+  - @users.each do |user|
+    %tr
+      %td= user.first_name
