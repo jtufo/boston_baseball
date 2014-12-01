@@ -129,4 +129,10 @@ en:
       right: Right
       left: Left
       switch: Switch
+    last_played:
+      one: 1 year ago
+      two: 2 years ago
+      three: 3 years ago
+      four: 4 years ago
+      five: 5 or more years ago
 

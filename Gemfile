@@ -35,3 +35,10 @@ gem 'spring',        group: :development
 gem 'pg', group: :production
 gem 'rails_12factor', group: :production
 
+# Run in Dev
+
+group :development do
+  gem 'faker'
+  gem 'populator'
+end
+

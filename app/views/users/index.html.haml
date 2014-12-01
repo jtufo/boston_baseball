@@ -2,6 +2,34 @@
 %p Find me in app/views/users/index.html.haml
 
 %table
+  %thead
+    %tr
+      %td Name
+      %td Email
+      %td City
+      %td State
+      %td Zip
+      %td Date of Birth
+      %td Age Group
+      %td Primary Position
+      %td Secondary Position
+      %td Bats
+      %td Throws
+      %td Playing Experience
+      %td Last Played
+  %tbody
   - @users.each do |user|
     %tr
       %td= user.first_name
+      %td= mail_to user.email
+      %td= user.city
+      %td= user.state
+      %td= user.zip
+      %td= user.birthdate
+      %td= user.age_group
+      %td= user.primary_position
+      %td= user.secondary_position
+      %td= user.bats
+      %td= user.throws
+      %td= user.playing_experience
+      %td= user.last_played
