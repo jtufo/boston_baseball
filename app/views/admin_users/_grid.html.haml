@@ -1,0 +1,34 @@
+:erb
+  <%= grid(@tasks_grid) do |g|
+
+    g.column name:  'Name', attribute: 'full_name'
+
+    g.column name:  'Email', attribute: 'email'
+
+    g.column name:  'City', attribute: 'city'
+
+    g.column name:  'State', attribute: 'state', filter: false
+
+    g.column name:  'Zip', attribute: 'zip', filter: false
+
+    g.column name:  'Age Group', attribute: 'age_group', filter: false
+
+    g.column name:  'Primary Position', attribute: 'primary_position',
+      custom_filter: {'Pitcher' => 'pitcher', 'Catcher' => 'catcher', 'First' => 'first', 'Second' => 'second', 'Third' => 'third', 'Shortstop' => 'shortstop', 'Outfield' => 'outfield'}
+
+    g.column name:  'Secondary Position', attribute: 'secondary_position',
+      custom_filter: {'Pitcher' => 'pitcher', 'Catcher' => 'catcher', 'First' => 'first', 'Second' => 'second', 'Third' => 'third', 'Shortstop' => 'shortstop', 'Outfield' => 'outfield'}
+
+    g.column name:  'Bats', attribute: 'bats', filter: false
+
+    g.column name:  'Throws', attribute: 'throws', filter: false
+
+    g.column  name:  'Playing Experience' do |user|
+      user.playing_experience
+    end
+
+    g.column name:  'Last Played', attribute: 'last_played', filter: false
+
+    g.column  name:  'Last Updated', attribute: 'updated_at'
+
+  end %>

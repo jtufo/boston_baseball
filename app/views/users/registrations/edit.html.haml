@@ -10,6 +10,26 @@
     = f.input :password, autocomplete: "off", hint: "leave it blank if you don't want to change it", required: false
     = f.input :password_confirmation, required: false
     = f.input :current_password, hint: "we need your current password to confirm your changes", required: true
+
+    = f.input :city, required: true, autofocus: true
+    = f.input :state, required: true, autofocus: true, collection: State.all
+    = f.input :zip, required: true, autofocus: true
+
+    = f.input :phone, required: true, autofocus: true
+
+    = f.input :birthdate, required: true, autofocus: true
+    
+    = f.input :age_group, required: true, autofocus: true, collection: AgeGroup.all
+
+    = f.input :primary_position, required: true, autofocus: true, collection: Position.all
+    = f.input :secondary_position, required: true, autofocus: true, collection: Position.all
+
+    = f.input :bats, required: true, autofocus: true, collection: BatsThrows.all
+    = f.input :throws, required: true, autofocus: true, collection: BatsThrows.all
+
+    = f.input :playing_experience, required: true, autofocus: true
+
+    = f.input :last_played, required: true, autofocus: true
   .form-actions
     = f.button :submit, "Update"
 %h3 Cancel my account

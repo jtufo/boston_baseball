@@ -7,7 +7,7 @@ class LastPlayed
     "five"
   ]
 
-  def self.age_group
+  def self.last_played
     LAST_PLAYED
   end
 

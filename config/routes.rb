@@ -14,9 +14,6 @@ Rails.application.routes.draw do
   
   root 'welcome#index'
 
-  get 'manager' => 'landing#manager'
-  get 'player' => 'landing#player'
-
   devise_scope :user do
     get "player/sign_up", to: "devise/registrations#new"
     get "player/sign_in", to: "devise/sessions#new"

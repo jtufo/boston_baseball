@@ -7,6 +7,7 @@ namespace :db do
     [User, AdminUser].each(&:delete_all)
 
     User.populate(20) do |user|
+      user.full_name = Faker::Name.name
       user.first_name = Faker::Name.first_name
       user.last_name = Faker::Name.last_name
       user.email = Faker::Internet.email

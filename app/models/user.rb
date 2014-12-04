@@ -3,4 +3,13 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+         after_create :set_fullname
+         private
+
+          def set_fullname
+            self.full_name = "#{first_name} #{last_name}"
+            self.save
+          end
+
 end
