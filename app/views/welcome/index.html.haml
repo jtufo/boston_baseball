@@ -1,29 +1,47 @@
-%p
-  Player Log in
+.push_three.three.columns
+  %h5
+    Player
 
-= form_tag session_path(:user) do
-  = text_field_tag 'user[email]'
-  = password_field_tag 'user[password]'
-  = check_box_tag 'user[remember_me]'
-  = label_tag 'user[remember_me]', 'Remember me'
+  = form_tag session_path(:user) do
+    .field
+      = text_field_tag 'user[email]', nil, class: 'input'
+    .field
+      = password_field_tag 'user[password]', nil, class: 'input'
+    = check_box_tag 'user[remember_me]'
+    = label_tag 'user[remember_me]', 'Remember me', class: "remember-me"
 
-  %button Sign in
-  = link_to "Forgot your password?", new_password_path(:user)
+    .medium.primary.btn.u-full-width
+      %button
+        Sign in
+    = link_to "Forgot your password?", new_password_path(:user), class: "forgot"
 
-%p
-  = link_to "Sign up as a player", player_sign_up_path
+  %p
+    %span.or-Seperator OR
 
-%p
-  Manager Login
+  %p
+    .medium.default.btn
+      = link_to "Sign up as a player", player_sign_up_path
 
-= form_tag session_path(:admin_user) do
-  = text_field_tag 'admin_user[email]'
-  = password_field_tag 'admin_user[password]'
-  = check_box_tag 'admin_user[remember_me]'
-  = label_tag 'admin_user[remember_me]', 'Remember me'
-  
-  %button Sign in
-  = link_to "Forgot your password?", new_password_path(:admin_user)
+.three.columns
+  %h5
+    Manager
 
-%p
-  = link_to "Sign up as a manager", manager_sign_up_path
+  = form_tag session_path(:admin_user) do
+    .field
+      = text_field_tag 'admin_user[email]', nil, class: 'input'
+    .field
+      = password_field_tag 'admin_user[password]', nil, class: 'input'
+    = check_box_tag 'admin_user[remember_me]'
+    = label_tag 'admin_user[remember_me]', 'Remember me', class: "remember-me"
+    
+    .medium.danger.btn.u-full-width
+      %button
+        Sign in
+    = link_to "Forgot your password?", new_password_path(:admin_user), class: "forgot"
+
+  %p
+    %span.or-Seperator OR
+
+  %p
+    .medium.default.btn
+      = link_to "Sign up as a manager", manager_sign_up_path

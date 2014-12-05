@@ -114,9 +114,9 @@ en:
       West Virginia: West Virginia
       Wyoming: Wyoming
     age_group:
-      eighteen: 18 +
-      thirty: 30 +
-      forty: 40 +
+      eighteen: "18 +"
+      thirty: "30 +"
+      forty: "40 +"
     position:
       pitcher: Pitcher
       catcher: Catcher

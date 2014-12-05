@@ -1,34 +1,53 @@
-%h2 Sign up Player
-= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = f.error_notification
-  .form-inputs
-    = f.input :first_name, required: true, autofocus: true
-    = f.input :last_name, required: true, autofocus: true
+.six.columns.centered
+  .form-content-box
+    %h3 Sign up Player
+    = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+      = f.error_notification
+      .form-inputs
+        .field
+          = f.input :first_name, required: true, autofocus: true
+        .field
+          = f.input :last_name, required: true, autofocus: true
 
-    = f.input :email, required: true, autofocus: true
-    = f.input :password, required: true
-    = f.input :password_confirmation, required: true
+        .field
+          = f.input :email, required: true, autofocus: true
+        .field
+          = f.input :password, required: true
+        .field
+          = f.input :password_confirmation, required: true
 
-    = f.input :city, required: true, autofocus: true
-    = f.input :state, required: true, autofocus: true, collection: State.all
-    = f.input :zip, required: true, autofocus: true
+        .field
+          = f.input :city, required: true, autofocus: true
+        .field
+          = f.input :state, required: true, autofocus: true, collection: State.all
+        .field
+          = f.input :zip, required: true, autofocus: true
 
-    = f.input :phone, required: true, autofocus: true
+        .field
+          = f.input :phone, required: true, autofocus: true
 
-    = f.input :birthdate, required: true, autofocus: true,:start_year=>1950
-    
-    = f.input :age_group, required: true, autofocus: true, collection: AgeGroup.all
+        .field
+          = f.input :birthdate, required: true, autofocus: true,:start_year=>1950
+        
+        .field
+          = f.input :age_group, required: true, autofocus: true, collection: AgeGroup.all
 
-    = f.input :primary_position, required: true, autofocus: true, collection: Position.all
-    = f.input :secondary_position, required: true, autofocus: true, collection: Position.all
+        .field
+          = f.input :primary_position, required: true, autofocus: true, collection: Position.all
+        .field
+          = f.input :secondary_position, required: true, autofocus: true, collection: Position.all
 
-    = f.input :bats, required: true, autofocus: true, collection: BatsThrows.all
-    = f.input :throws, required: true, autofocus: true, collection: BatsThrows.all
+        .field
+          = f.input :bats, required: true, autofocus: true, collection: BatsThrows.all
+        .field
+          = f.input :throws, required: true, autofocus: true, collection: BatsThrows.all
 
-    = f.input :playing_experience, required: true, autofocus: true
+        .field
+          = f.input :playing_experience, required: true, autofocus: true
 
-    = f.input :last_played, required: true, autofocus: true, collection: LastPlayed.all
+        .field
+          = f.input :last_played, required: true, autofocus: true, collection: LastPlayed.all
 
-  .form-actions
-    = f.button :submit, "Sign up"
-= render "users/shared/links"
+      .form-actions
+        .medium.primary.btn
+          = f.button :submit, "Sign up"

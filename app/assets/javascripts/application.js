@@ -16,6 +16,8 @@
 //= require turbolinks
 //= require wice_grid
 //= require_tree .
+//= require modernizr
+//= require gumby
 
 $(function() {
   $('.datepicker').datepicker();

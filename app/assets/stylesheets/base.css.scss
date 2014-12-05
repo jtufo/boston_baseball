@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  border-bottom: 1px solid #d9d9d9;
+  padding: 5px 0;
+  text-align: center;
+
+  .logo {
+    font-size: 38px;
+  }
+}
+
+nav {
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      text-transform: uppercase;
+
+      a {
+        color: #404040;
+        font-size: 14px;
+        padding: {
+          left: 0.625em;
+          right: 0.625em;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  margin-top: 40px;
+}
+
+.signin-content-box {
+  border: 1px solid #f5f5f5;
+  padding: 10px 30px;
+}
+
+.form-content-box {
+  background: #f5f5f5;
+  margin-bottom: 20px;
+  padding: 10px 30px;
+}
+
+.btn {
+  button,
+  input[type="submit"] {
+    width: 100%;
+  }
+}
+
+a {
+  color: #000;
+}
+
+.forgot {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 15px;
+}
+
+.remember-me {
+  display: inline-block;
+  font-size: 13px;
+}
+
+.sign-up {
+  text-align: center;
+}
+
+.or-Seperator {
+  display: block;
+  text-align: center;
+  width: inherit;
+}
+
+.hint {
+  font-size: 11px;
+}
+
+h5 {
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+form {
+  .picker {
+    width: 100%;
+  }
+}
